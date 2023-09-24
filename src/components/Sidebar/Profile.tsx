@@ -10,8 +10,10 @@ export function Profile() {
         alt=""
       />
       <div className="flex flex-1 flex-col truncate">
-        <span className="text-sm font-semibold text-zinc-700">Diego Veiga</span>
-        <span className="truncate text-sm text-zinc-500">
+        <span className="text-sm font-semibold text-zinc-700 dark:text-zinc-100">
+          Diego Veiga
+        </span>
+        <span className="truncate text-sm text-zinc-500 dark:text-zinc-400">
           diego.veiga@xmobots.com.br
         </span>
       </div>
