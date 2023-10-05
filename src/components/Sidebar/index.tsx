@@ -24,19 +24,15 @@ import { Button } from '../Button'
 import { useEffect, useState } from 'react'
 
 export function Sidebar() {
-  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
-    if (localStorage.getItem('theme') === 'dark') {
-      return 'dark'
-    } else {
-      return 'light'
-    }
-  })
+  const [theme, setTheme] = useState<'light' | 'dark' | null>(null)
 
   useEffect(() => {
     if (localStorage.getItem('theme') === 'dark') {
       document.documentElement.classList.add('dark')
+      setTheme('dark')
     } else {
       document.documentElement.classList.remove('dark')
+      setTheme('light')
     }
   }, [theme])
 
